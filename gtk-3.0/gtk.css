@@ -1,0 +1,41 @@
+*
+{
+  -GtkScrollbar-has-backward-stepper: true;
+  -GtkScrollbar-has-forward-stepper: true;
+  -GtkScrollbar-has-secondary-backward-stepper: true;
+  -GtkScrollbar-has-secondary-forward-stepper: true;
+  -GtkRange-stepper-size: 16;
+  -GtkRange-slider-width: 16;
+}
+
+/* GTK 3.20 */
+.scrollbar.vertical slider,
+scrollbar.vertical slider
+{
+    min-width: 16px;
+}
+
+.scrollbar.slider.vertical:dir(ltr):not(:hover):not(.dragging),
+.scrollbar.slider.vertical:dir(rtl):not(:hover):not(.dragging),
+.scrollbar.slider.horizontal:not(:hover):not(.dragging),
+.scrollbar.vertical:hover:dir(ltr),
+.scrollbar.vertical.dragging:dir(ltr),
+.scrollbar.vertical:hover:dir(rtl),
+.scrollbar.vertical.dragging:dir(rtl)
+{
+    -GtkRange-stepper-size: 16;
+    -GtkRange-slider-width: 16;
+}
+
+.scrollbar.slider,
+.scrollbar.slider:hover,
+.scrollbar.slider:active,
+.scrollbar.slider:not(:hover),
+.scrollbar.slider:not(:active),
+.scrollbar.slider:backdrop,
+.scrollbar.slider:hover:backdrop,
+.scrollbar.slider:active:backdrop
+{
+    background-color: rgba(255, 100, 0, 0.7);
+    border-radius: 3px;
+}
