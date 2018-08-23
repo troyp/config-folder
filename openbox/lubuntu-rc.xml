@@ -387,6 +387,12 @@
         <command>xkill</command>
       </action>
     </keybind>
+    <!-- Run hotshell -->
+    <keybind key="W-s">
+      <action name="Execute">
+        <command>lxterm -e "bash --norc -c hs"</command>
+      </action>
+    </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>amixer -q sset Master 3%+ unmute</command>
