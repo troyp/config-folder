@@ -9,11 +9,14 @@
 }
 
 /* GTK 3.20 */
+/* (x-terminal-emulator:14549): Gtk-WARNING **: Theme parsing error: gtk.css:15:13: 'min-width' is not a valid property name */
+/*
 .scrollbar.vertical slider,
 scrollbar.vertical slider
 {
     min-width: 16px;
 }
+*/
 
 .scrollbar.slider.vertical:dir(ltr):not(:hover):not(.dragging),
 .scrollbar.slider.vertical:dir(rtl):not(:hover):not(.dragging),
