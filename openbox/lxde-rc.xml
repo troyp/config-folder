@@ -34,7 +34,7 @@
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is -->
-    <primaryMonitor></primaryMonitor>
+    <primaryMonitor/>
   </placement>
   <theme>
     <name>Onyx</name>
@@ -93,8 +93,8 @@
     <font place="InactiveOnScreenDisplay">
       <name>Sans</name>
       <size>8</size>
-      <weight></weight>
-      <slant></slant>
+      <weight/>
+      <slant/>
     </font>
   </theme>
   <desktops>
@@ -162,13 +162,11 @@
     <moveButton>Middle</moveButton>
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
-
   <!-- ************ -->
   <!-- *          * -->
   <!-- * KEYBOARD * -->
   <!-- *          * -->
   <!-- ************ -->
-
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Go to desktop -->
@@ -428,13 +426,11 @@
       </action>
     </keybind>
   </keyboard>
-
   <!-- ********* -->
   <!-- *       * -->
   <!-- * MOUSE * -->
   <!-- *       * -->
   <!-- ********* -->
-
   <mouse>
     <dragThreshold>8</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
@@ -767,13 +763,11 @@
       </mousebind>
     </context>
   </mouse>
-
   <!-- ******** -->
   <!-- *      * -->
   <!-- * MENU * -->
   <!-- *      * -->
   <!-- ******** -->
-
   <menu>
     <!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless -->
