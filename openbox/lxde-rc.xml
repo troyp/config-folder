@@ -317,6 +317,18 @@
     <keybind key="W-apostrophe">
       <action name="ToggleMaximize"/>
     </keybind>
+    <keybind key="W-A-Up">
+        <action name="MoveRelative"><y>-50</y></action>
+    </keybind>
+    <keybind key="W-A-Down">
+        <action name="MoveRelative"><y>50</y></action>
+    </keybind>
+    <keybind key="W-A-Left">
+        <action name="MoveRelative"><x>-50</x></action>
+    </keybind>
+    <keybind key="W-A-Right">
+        <action name="MoveRelative"><x>50</x></action>
+    </keybind>
     <keybind key="W-S-quotedbl">
       <action name="Iconify"/>
     </keybind>
