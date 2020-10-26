@@ -4,11 +4,16 @@
 <!-- To refresh, execute `openbox with reconfigure option` -->
 <!-- For documentation, see http://openbox.org/wiki/Help:Bindings & http://openbox.org/wiki/Help:Actions -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <resistance>
+
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
+
   </resistance>
+
   <focus>
+
     <focusNew>yes</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
@@ -25,8 +30,11 @@
     <raiseOnFocus>no</raiseOnFocus>
     <!-- when followMouse is enabled, and a window is given focus by moving the
        mouse into it, also raise the window -->
+
   </focus>
+
   <placement>
+
     <policy>Smart</policy>
     <!-- 'Smart' or 'UnderMouse' -->
     <center>yes</center>
@@ -42,8 +50,11 @@
        from 1, specifying a particular monitor.  Or it can be one of the
        following: 'Mouse' - where the mouse is, or
                   'Active' - where the active window is -->
+
   </placement>
+
   <theme>
+
     <name>Lubuntu-default</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
@@ -112,8 +123,11 @@
       <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
+
   </theme>
+
   <desktops>
+
     <!-- this stuff is only used at startup, pagers allow you to change them
        during a session
 
@@ -133,8 +147,11 @@
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
+
   </desktops>
+
   <resize>
+
     <drawContents>no</drawContents>
     <popupShow>Nonpixel</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
@@ -149,18 +166,24 @@
       <!-- positive number for distance from top edge, negative number for
          distance from bottom edge, or 'Center' -->
     </popupFixedPosition>
+
   </resize>
+
   <!-- You can reserve a portion of your screen where windows will not cover when
      they are maximized, or when they are initially placed.
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
+
     <top>0</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
+
   </margins>
+
   <dock>
+
     <position>TopLeft</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
@@ -177,16 +200,22 @@
     <!-- in milliseconds (1000 = 1 second) -->
     <moveButton>Middle</moveButton>
     <!-- 'Left', 'Middle', 'Right' -->
+
   </dock>
 
+  <!-- ------------------------------------------------------------------------------- -->
   <!-- ************ -->
   <!-- *          * -->
   <!-- * KEYBOARD * -->
   <!-- *          * -->
   <!-- ************ -->
+
   <keyboard>
+
     <chainQuitKey>C-g</chainQuitKey>
+
     <!-- Go to desktop -->
+
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -207,6 +236,7 @@
         <to>4</to>
       </action>
     </keybind>
+
     <!-- Move to desktop -->
     <keybind key="W-S-1">
       <action name="SendToDesktop">
@@ -231,6 +261,7 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
+
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -240,12 +271,14 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
+
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
     <keybind key="A-Print">
       <action name="Execute">
         <command>lxsession-default screenshot window</command>
       </action>
     </keybind>
+
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -277,6 +310,7 @@
         </finalactions>
       </action>
     </keybind>
+
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Right">
       <action name="DirectionalCycleWindows">
@@ -298,42 +332,45 @@
         <direction>down</direction>
       </action>
     </keybind>
+
     <!-- Keybindings for window tiling -->
-    <keybind key="W-Left">        # HalfLeftScreen
+    <keybind key="W-Left">                   # HalfLeftScreen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><height>97%</height><width>50%</width></action>
     </keybind>
-    <keybind key="W-Right">        # HalfRightScreen
+    <keybind key="W-Right">                  # HalfRightScreen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>-0</x><y>0</y><height>97%</height><width>50%</width></action>
     </keybind>
-    <keybind key="W-Up">        # HalfUpperScreen
+    <keybind key="W-Up">                     # HalfUpperScreen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><width>100%</width><height>50%</height></action>
     </keybind>
-    <keybind key="W-Down">        # HalfLowerScreen
+    <keybind key="W-Down">                   # HalfLowerScreen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>-0</y><width>100%</width><height>50%</height></action>
     </keybind>
-    <keybind key="W-Home">        # TopLeftCorner
+    <keybind key="W-Home">                   # TopLeftCorner
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><width>50%</width><height>50%</height></action>
     </keybind>
-    <keybind key="W-End">        # BottomLeftCorner
+    <keybind key="W-End">                    # BottomLeftCorner
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>-0</y><width>50%</width><height>50%</height></action>
     </keybind>
-    <keybind key="W-Prior">        # TopRightCorner
+    <keybind key="W-Prior">                  # TopRightCorner
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>-0</x><y>0</y><width>50%</width><height>50%</height></action>
     </keybind>
-    <keybind key="W-Next">        # BottomRightCorner
+    <keybind key="W-Next">                   # BottomRightCorner
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>-0</x><y>-0</y><width>50%</width><height>50%</height></action>
     </keybind>
     <keybind key="W-apostrophe">
       <action name="ToggleMaximize"/>
     </keybind>
+
+    <!-- Keybindings for window movement -->
     <keybind key="W-A-Up">
         <action name="MoveRelative"><y>-50</y></action>
     </keybind>
@@ -352,6 +389,7 @@
     <keybind key="W-o">
       <action name="ToggleAlwaysOnTop"/>
     </keybind>
+
     <!-- Keybindings for running applications on Home + E -->
     <keybind key="W-e">
       <action name="Execute">
@@ -362,6 +400,7 @@
         <command>lxsession-default file_manager</command>
       </action>
     </keybind>
+
     <!-- roxterm -->
     <keybind key="W-Return">
       <action name="Execute">
@@ -405,6 +444,8 @@
         <command>lxterm -e "bash --norc -c hs"</command>
       </action>
     </keybind>
+
+    <!-- Special Keys -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>amixer -q sset Master 3%+ unmute</command>
@@ -454,14 +495,18 @@
         <command>lxsession-default quit</command>
       </action>
     </keybind>
+
   </keyboard>
 
+  <!-- ------------------------------------------------------------------------------- -->
   <!-- ********* -->
   <!-- *       * -->
   <!-- * MOUSE * -->
   <!-- *       * -->
   <!-- ********* -->
+
   <mouse>
+
     <dragThreshold>8</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
     <doubleClickTime>200</doubleClickTime>
@@ -791,6 +836,7 @@
     </context>
   </mouse>
 
+  <!-- ------------------------------------------------------------------------------- -->
   <!-- ******** -->
   <!-- *      * -->
   <!-- * MENU * -->
@@ -798,6 +844,7 @@
   <!-- ******** -->
 
   <menu>
+
     <!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
@@ -825,7 +872,9 @@
     <showIcons>yes</showIcons>
     <!-- show icons on the menu -->
   </menu>
+
   <applications>
+
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
@@ -913,5 +962,7 @@
       <maximized>true</maximized>
     </application>
     -->
+
   </applications>
+
 </openbox_config>
