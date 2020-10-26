@@ -372,6 +372,20 @@
     <keybind key="W-A-Right">
         <action name="MoveRelative"><x>50</x></action>
     </keybind>
+    <keybind key="W-A-S-Up">
+        <action name="MoveRelative"><y>-10</y></action>
+    </keybind>
+    <keybind key="W-A-S-Down">
+        <action name="MoveRelative"><y>10</y></action>
+    </keybind>
+    <keybind key="W-A-S-Left">
+        <action name="MoveRelative"><x>-10</x></action>
+    </keybind>
+    <keybind key="W-A-S-Right">
+        <action name="MoveRelative"><x>10</x></action>
+    </keybind>
+
+    <!-- Keybindings for window properties -->
     <keybind key="W-S-quotedbl">
       <action name="Iconify"/>
     </keybind>
