@@ -475,6 +475,12 @@
         <command>lxsession-default screenshot</command>
       </action>
     </keybind>
+    <!-- screenshot: rectangle (spectacle) -->
+    <keybind key="S-Print">
+        <action name="Execute">
+            <command>spectacle -r</command>
+        </action>
+    </keybind>
     <!-- Launch logout when push on the shutdown button -->
     <keybind key="XF86PowerOff">
       <action name="Execute">
