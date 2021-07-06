@@ -3,6 +3,8 @@
         Copy the file to $HOME/.config/openbox/ instead. -->
 <!-- To refresh, execute `openbox with reconfigure option` -->
 <!-- For documentation, see http://openbox.org/wiki/Help:Bindings & http://openbox.org/wiki/Help:Actions -->
+<!-- To reload Openbox config, use openbox with reconfigure option -->
+
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <resistance>
@@ -203,7 +205,7 @@
 
   </dock>
 
-  <!-- ------------------------------------------------------------------------------- -->
+
   <!-- ************ -->
   <!-- *          * -->
   <!-- * KEYBOARD * -->
@@ -281,13 +283,6 @@
     <keybind key="A-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
-      </action>
-    </keybind>
-
-    <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>lxsession-default screenshot window</command>
       </action>
     </keybind>
 
@@ -505,6 +500,7 @@
         <command>lxsession-default file_manager</command>
       </action>
     </keybind>
+
     <keybind key="Print">
       <action name="Execute">
         <command>lxsession-default screenshot</command>
@@ -516,6 +512,13 @@
             <command>spectacle -r</command>
         </action>
     </keybind>
+    <!-- screenshot: current window with scrot -->
+    <keybind key="A-Print">
+        <action name="Execute">
+            <command>lxsession-default screenshot window</command>
+        </action>
+    </keybind>
+
     <!-- Launch logout when push on the shutdown button -->
     <keybind key="XF86PowerOff">
       <action name="Execute">
@@ -525,7 +528,6 @@
 
   </keyboard>
 
-  <!-- ------------------------------------------------------------------------------- -->
   <!-- ********* -->
   <!-- *       * -->
   <!-- * MOUSE * -->
@@ -863,7 +865,7 @@
     </context>
   </mouse>
 
-  <!-- ------------------------------------------------------------------------------- -->
+
   <!-- ******** -->
   <!-- *      * -->
   <!-- * MENU * -->
