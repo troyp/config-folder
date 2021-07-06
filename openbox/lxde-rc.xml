@@ -427,7 +427,7 @@
     <!-- Run hotshell -->
     <keybind key="W-s">
       <action name="Execute">
-        <command>lxterm -e "bash --norc -c hs"</command>
+        <command>lxterm -T "hotshell" -e "bash --norc -c hs"</command>
       </action>
     </keybind>
 
