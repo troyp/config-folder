@@ -245,6 +245,18 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
 
+    <!-- Generate mouse click -->
+    <keybind key="W-A-Insert">
+        <action name="Execute">
+            <command>xdotool click 1</command>
+        </action>
+    </keybind>
+    <keybind key="W-A-Delete">
+        <action name="Execute">
+            <command>xdotool click 3</command>
+        </action>
+    </keybind>
+
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
