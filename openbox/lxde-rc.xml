@@ -421,6 +421,11 @@
         <command>krunner</command>
       </action>
     </keybind>
+    <keybind key="W-F2">
+        <action name="Execute">
+            <command>rofi -combi-modi window,drun,run -show combi -modi combi</command>
+        </action>
+    </keybind>
     <!-- Keybindings to toggle fullscreen -->
     <keybind key="W-F11">
       <action name="ToggleFullscreen"/>

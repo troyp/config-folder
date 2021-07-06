@@ -433,11 +433,17 @@
       </action>
     </keybind>
     <keybind key="A-F2">
+        <action name="Execute">
+            <!-- <command>lxsession-default launcher_manager</command> -->
+            <command>krunner</command>
+        </action>
+    </keybind>
+    <keybind key="W-F2">
       <action name="Execute">
-        <!-- <command>lxsession-default launcher_manager</command> -->
-        <command>krunner</command>
+          <command>rofi -combi-modi window,drun,run -show combi -modi combi</command>
       </action>
     </keybind>
+
     <!-- Keybindings to toggle fullscreen -->
     <keybind key="W-F11">
       <action name="ToggleFullscreen"/>
