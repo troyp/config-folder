@@ -298,12 +298,17 @@
       </action>
     </keybind>
     <keybind key="A-S-Tab">
-      <action name="PreviousWindow">
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
+        <action name="PreviousWindow">
+            <finalactions>
+                <action name="Focus"/>
+                <action name="Raise"/>
+                <action name="Unshade"/>
+            </finalactions>
+        </action>
+    </keybind>
+    <keybind key="W-Tab">
+        <action name="Execute">
+            <command>/home/troy/.scripts/currentappswitcher</command>
       </action>
     </keybind>
 
