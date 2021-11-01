@@ -164,6 +164,10 @@ local function create_page(type, t)
         {"Shift+RIGHT", "page_right", function() temp:move_page(1) end, {}},
         {"Ctrl+LEFT", "page_left_search", function() temp:move_page(-1, true) end, {}},
         {"Ctrl+RIGHT", "page_right_search", function() temp:move_page(1, true) end, {}},
+        {"Ctrl+n", "down_page2", function() temp:scroll_down() end, {repeatable = true}},
+        {"Ctrl+p", "up_page2", function() temp:scroll_up() end, {repeatable = true}},
+        {"Ctrl+b", "page_left_search2", function() temp:move_page(-1, true) end, {}},
+        {"Ctrl+f", "page_right_search2", function() temp:move_page(1, true) end, {}},
         {"Ctrl+ENTER", "run_latest", function() temp:run_search(LATEST_SEARCH.keyword, LATEST_SEARCH.flags) end, {}},
         {"f12", "open_search", function() temp:get_input(false) end, {}},
         {"Shift+f12", "open_flag_search", function() temp:get_input(true) end, {}}
