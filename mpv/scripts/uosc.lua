@@ -70,6 +70,7 @@ menu_item_height=36
 menu_item_height_fullscreen=50
 menu_wasd_navigation=no
 menu_hjkl_navigation=no
+menu_ctrl_npfb_navigation=no
 menu_opacity=0.8
 menu_font_scale=1
 
@@ -248,6 +249,7 @@ local options = {
 	menu_item_height_fullscreen = 50,
 	menu_wasd_navigation = false,
 	menu_hjkl_navigation = false,
+	menu_ctrl_npfb_navigation = false,
 	menu_opacity = 0.8,
 	menu_font_scale = 1,
 
@@ -1191,6 +1193,13 @@ function Menu:enable_key_bindings()
 		menu:add_key_binding('l',       'menu-select3',      self:create_action('open_selected_item'))
 		menu:add_key_binding('shift+l', 'menu-select-soft3', self:create_action('open_selected_item_soft'))
 	end
+
+  if options.menu_ctrl_npfb_navigation then
+    menu:add_key_binding('ctrl+p', 'menu-prev1',   self:create_action('prev'), 'repeatable')
+    menu:add_key_binding('ctrl+n', 'menu-next1',   self:create_action('next'), 'repeatable')
+    menu:add_key_binding('ctrl+f', 'menu-select4', self:create_action('open_selected_item'))
+    menu:add_key_binding('ctrl+b', 'menu-back4',   self:create_action('open_selected_item'))
+  end
 
 	menu:add_key_binding('mbtn_back',  'menu-back-alt3',   self:create_action('back'))
 	menu:add_key_binding('bs',         'menu-back-alt4',   self:create_action('back'))
