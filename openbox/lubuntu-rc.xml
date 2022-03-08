@@ -250,6 +250,18 @@
             <command>xdotool click 3</command>
         </action>
     </keybind>
+    <!-- Click near bottom right corner -->
+    <keybind key="W-A-F4">
+        <action name="Execute">
+            <command>xdotool mousemove 1850 1070 click 1 mousemove restore</command>
+        </action>
+    </keybind>
+    <!-- Click near center of screen -->
+    <keybind key="W-A-F5">
+        <action name="Execute">
+            <command>xdotool mousemove 940 540 click 1 mousemove restore</command>
+        </action>
+    </keybind>
 
     <!-- Move to desktop -->
     <keybind key="W-S-1">
@@ -372,38 +384,20 @@
     </keybind>
 
     <!-- Keybindings for window movement -->
-    <keybind key="W-A-Up">
-        <action name="MoveRelative"><y>-50</y></action>
-    </keybind>
-    <keybind key="W-A-Down">
-        <action name="MoveRelative"><y>50</y></action>
-    </keybind>
-    <keybind key="W-A-Left">
-        <action name="MoveRelative"><x>-50</x></action>
-    </keybind>
-    <keybind key="W-A-Right">
-        <action name="MoveRelative"><x>50</x></action>
-    </keybind>
-    <keybind key="W-A-S-Up">
-        <action name="MoveRelative"><y>-10</y></action>
-    </keybind>
-    <keybind key="W-A-S-Down">
-        <action name="MoveRelative"><y>10</y></action>
-    </keybind>
-    <keybind key="W-A-S-Left">
-        <action name="MoveRelative"><x>-10</x></action>
-    </keybind>
-    <keybind key="W-A-S-Right">
-        <action name="MoveRelative"><x>10</x></action>
-    </keybind>
+    <keybind key="W-A-Up">      <action name="MoveRelative"> <y> -50 </y> </action> </keybind>
+    <keybind key="W-A-Down">    <action name="MoveRelative"> <y>  50 </y> </action> </keybind>
+    <keybind key="W-A-Left">    <action name="MoveRelative"> <x> -50 </x> </action> </keybind>
+    <keybind key="W-A-Right">   <action name="MoveRelative"> <x>  50 </x> </action> </keybind>
+    <keybind key="W-A-S-Up">    <action name="MoveRelative"> <y> -10 </y> </action> </keybind>
+    <keybind key="W-A-S-Down">  <action name="MoveRelative"> <y>  10 </y> </action> </keybind>
+    <keybind key="W-A-S-Left">  <action name="MoveRelative"> <x> -10 </x> </action> </keybind>
+    <keybind key="W-A-S-Right"> <action name="MoveRelative"> <x>  10 </x> </action> </keybind>
 
     <!-- Keybindings for window properties -->
-    <keybind key="W-S-quotedbl">
-      <action name="Iconify"/>
-    </keybind>
-    <keybind key="W-o">
-      <action name="ToggleAlwaysOnTop"/>
-    </keybind>
+    <keybind key="W-S-quotedbl"> <action name="Iconify"/> </keybind>
+    <keybind key="W-6"> <action name="Iconify"/> </keybind>
+    <keybind key="W-o"> <action name="ToggleAlwaysOnTop"/> </keybind>
+    <keybind key="W-t"> <action name="ToggleDecorations"/> </keybind>
 
     <!-- Keybindings for running applications on Home + E -->
     <keybind key="W-e">

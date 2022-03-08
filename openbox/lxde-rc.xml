@@ -329,38 +329,20 @@
     </keybind>
 
     <!-- Keybindings for window movement -->
-    <keybind key="W-A-Up">
-        <action name="MoveRelative"><y>-50</y></action>
-    </keybind>
-    <keybind key="W-A-Down">
-        <action name="MoveRelative"><y>50</y></action>
-    </keybind>
-    <keybind key="W-A-Left">
-        <action name="MoveRelative"><x>-50</x></action>
-    </keybind>
-    <keybind key="W-A-Right">
-        <action name="MoveRelative"><x>50</x></action>
-    </keybind>
-    <keybind key="W-A-S-Up">
-        <action name="MoveRelative"><y>-10</y></action>
-    </keybind>
-    <keybind key="W-A-S-Down">
-        <action name="MoveRelative"><y>10</y></action>
-    </keybind>
-    <keybind key="W-A-S-Left">
-        <action name="MoveRelative"><x>-10</x></action>
-    </keybind>
-    <keybind key="W-A-S-Right">
-        <action name="MoveRelative"><x>10</x></action>
-    </keybind>
+    <keybind key="W-A-Up">      <action name="MoveRelative"> <y> -50 </y> </action> </keybind>
+    <keybind key="W-A-Down">    <action name="MoveRelative"> <y>  50 </y> </action> </keybind>
+    <keybind key="W-A-Left">    <action name="MoveRelative"> <x> -50 </x> </action> </keybind>
+    <keybind key="W-A-Right">   <action name="MoveRelative"> <x>  50 </x> </action> </keybind>
+    <keybind key="W-A-S-Up">    <action name="MoveRelative"> <y> -10 </y> </action> </keybind>
+    <keybind key="W-A-S-Down">  <action name="MoveRelative"> <y>  10 </y> </action> </keybind>
+    <keybind key="W-A-S-Left">  <action name="MoveRelative"> <x> -10 </x> </action> </keybind>
+    <keybind key="W-A-S-Right"> <action name="MoveRelative"> <x>  10 </x> </action> </keybind>
 
     <!-- Keybindings for window properties -->
-    <keybind key="W-S-quotedbl">
-      <action name="Iconify"/>
-    </keybind>
-    <keybind key="W-o">
-      <action name="ToggleAlwaysOnTop"/>
-    </keybind>
+    <keybind key="W-S-quotedbl"> <action name="Iconify"/> </keybind>
+    <keybind key="W-6"> <action name="Iconify"/> </keybind>
+    <keybind key="W-o"> <action name="ToggleAlwaysOnTop"/> </keybind>
+    <keybind key="W-t"> <action name="ToggleDecorations"/> </keybind>
 
     <!-- Keybindings for running applications on Home + E -->
     <keybind key="W-e">
