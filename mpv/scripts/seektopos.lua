@@ -46,7 +46,7 @@ mp.add_key_binding(
     get_user_input(
       function(input)
         if string.sub(input,1,1)=="." then
-          mp.commandv("seek", string.sub(input,2,-1), "absolute-percent")
+          mp.commandv("seek", input*100, "absolute-percent")
         else
           mp.commandv("seek", input or "", "absolute")
         end
