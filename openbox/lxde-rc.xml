@@ -362,7 +362,7 @@
           <enabled>true</enabled>
           <name>roxterm</name>
         </startupnotify>
-        <command>roxterm --geometry 122x28+0-38</command>
+        <command>roxterm --geometry 102x27-17-45</command>
       </action>
     </keybind>
     <!-- Keybindings for running Run menu from Lxpanel on Home + R-->
