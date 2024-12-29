@@ -4,18 +4,12 @@
 <!-- To refresh, execute `openbox with reconfigure option` -->
 <!-- For documentation, see http://openbox.org/wiki/Help:Bindings & http://openbox.org/wiki/Help:Actions -->
 <!-- To reload Openbox config, use openbox with reconfigure option -->
-
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
-
   <resistance>
-
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
-
   </resistance>
-
   <focus>
-
     <focusNew>yes</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
@@ -32,11 +26,8 @@
     <raiseOnFocus>no</raiseOnFocus>
     <!-- when followMouse is enabled, and a window is given focus by moving the
        mouse into it, also raise the window -->
-
   </focus>
-
   <placement>
-
     <policy>Smart</policy>
     <!-- 'Smart' or 'UnderMouse' -->
     <center>yes</center>
@@ -52,12 +43,9 @@
        from 1, specifying a particular monitor.  Or it can be one of the
        following: 'Mouse' - where the mouse is, or
                   'Active' - where the active window is -->
-
   </placement>
-
   <theme>
-
-    <name>Lubuntu-default</name>
+    <name>Artwiz-boxed</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -125,11 +113,8 @@
       <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-
   </theme>
-
   <desktops>
-
     <!-- this stuff is only used at startup, pagers allow you to change them
        during a session
 
@@ -146,14 +131,11 @@
       <name>desktop3</name>
       <name>desktop4</name>
     </names>
-    <popupTime>875</popupTime>
+    <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
-
   </desktops>
-
   <resize>
-
     <drawContents>no</drawContents>
     <popupShow>Nonpixel</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
@@ -168,24 +150,18 @@
       <!-- positive number for distance from top edge, negative number for
          distance from bottom edge, or 'Center' -->
     </popupFixedPosition>
-
   </resize>
-
   <!-- You can reserve a portion of your screen where windows will not cover when
      they are maximized, or when they are initially placed.
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-
     <top>0</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
-
   </margins>
-
   <dock>
-
     <position>TopLeft</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
@@ -202,22 +178,15 @@
     <!-- in milliseconds (1000 = 1 second) -->
     <moveButton>Middle</moveButton>
     <!-- 'Left', 'Middle', 'Right' -->
-
   </dock>
-
-
   <!-- ************ -->
   <!-- *          * -->
   <!-- * KEYBOARD * -->
   <!-- *          * -->
   <!-- ************ -->
-
   <keyboard>
-
     <chainQuitKey>C-g</chainQuitKey>
-
     <!-- Go to desktop -->
-
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -238,31 +207,29 @@
         <to>4</to>
       </action>
     </keybind>
-
     <!-- Generate mouse click -->
     <keybind key="W-A-Insert">
-        <action name="Execute">
-            <command>xdotool click 1</command>
-        </action>
+      <action name="Execute">
+        <command>xdotool click 1</command>
+      </action>
     </keybind>
     <keybind key="W-A-Delete">
-        <action name="Execute">
-            <command>xdotool click 3</command>
-        </action>
+      <action name="Execute">
+        <command>xdotool click 3</command>
+      </action>
     </keybind>
     <!-- Click near bottom right corner -->
     <keybind key="W-A-F4">
-        <action name="Execute">
-            <command>xdotool mousemove 1850 1070 click 1 mousemove restore</command>
-        </action>
+      <action name="Execute">
+        <command>xdotool mousemove 1850 1070 click 1 mousemove restore</command>
+      </action>
     </keybind>
     <!-- Click near center of screen -->
     <keybind key="W-A-F5">
-        <action name="Execute">
-            <command>xdotool mousemove 940 540 click 1 mousemove restore</command>
-        </action>
+      <action name="Execute">
+        <command>xdotool mousemove 940 540 click 1 mousemove restore</command>
+      </action>
     </keybind>
-
     <!-- Move to desktop -->
     <keybind key="W-S-1">
       <action name="SendToDesktop">
@@ -287,7 +254,6 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -297,7 +263,6 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -310,20 +275,19 @@
       </action>
     </keybind>
     <keybind key="A-S-Tab">
-        <action name="PreviousWindow">
-            <finalactions>
-                <action name="Focus"/>
-                <action name="Raise"/>
-                <action name="Unshade"/>
-            </finalactions>
-        </action>
-    </keybind>
-    <keybind key="W-Tab">
-        <action name="Execute">
-            <command>/home/troy/.scripts/currentappswitcher</command>
+      <action name="PreviousWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
       </action>
     </keybind>
-
+    <keybind key="W-Tab">
+      <action name="Execute">
+        <command>/home/troy/.scripts/currentappswitcher</command>
+      </action>
+    </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Right">
       <action name="DirectionalCycleWindows">
@@ -345,7 +309,6 @@
         <direction>down</direction>
       </action>
     </keybind>
-
     <!-- Keybindings for window tiling -->
     <keybind key="W-Left">                   # HalfLeftScreen
       <action name="UnmaximizeFull"/>
@@ -382,7 +345,6 @@
     <keybind key="W-apostrophe">
       <action name="ToggleMaximize"/>
     </keybind>
-
     <!-- Keybindings for window movement -->
     <keybind key="W-A-Up">      <action name="MoveRelative"> <y> -50 </y> </action> </keybind>
     <keybind key="W-A-Down">    <action name="MoveRelative"> <y>  50 </y> </action> </keybind>
@@ -392,13 +354,11 @@
     <keybind key="W-A-S-Down">  <action name="MoveRelative"> <y>  10 </y> </action> </keybind>
     <keybind key="W-A-S-Left">  <action name="MoveRelative"> <x> -10 </x> </action> </keybind>
     <keybind key="W-A-S-Right"> <action name="MoveRelative"> <x>  10 </x> </action> </keybind>
-
     <!-- Keybindings for window properties -->
     <keybind key="W-S-quotedbl"> <action name="Iconify"/> </keybind>
     <keybind key="W-6"> <action name="Iconify"/> </keybind>
     <keybind key="W-o"> <action name="ToggleAlwaysOnTop"/> </keybind>
     <keybind key="W-t"> <action name="ToggleDecorations"/> </keybind>
-
     <!-- Keybindings for running applications on Home + E -->
     <keybind key="W-e">
       <action name="Execute">
@@ -409,15 +369,24 @@
         <command>lxsession-default file_manager</command>
       </action>
     </keybind>
-
     <!-- roxterm -->
     <keybind key="W-Return">
+        <action name="Execute">
+            <startupnotify>
+                <enabled>true</enabled>
+                <name>roxterm</name>
+            </startupnotify>
+            <command>roxterm --geometry 102x27-17-45</command>
+        </action>
+    </keybind>
+    <!-- qalculate -->
+    <keybind key="W-c">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>roxterm</name>
+          <name>qalculate</name>
         </startupnotify>
-        <command>roxterm --geometry 102x27-17-45</command>
+        <command>qalculate</command>
       </action>
     </keybind>
     <!-- Keybindings for running Run menu from Lxpanel on Home + R-->
@@ -426,18 +395,27 @@
         <command>lxpanelctl menu</command>
       </action>
     </keybind>
-    <keybind key="A-F2">
+    <!-- rofi -->
+    <keybind key="W-C-A-space">
         <action name="Execute">
-            <!-- <command>lxsession-default launcher_manager</command> -->
-            <command>krunner</command>
+            <startupnotify>
+                <enabled>true</enabled>
+                <name>rofi</name>
+            </startupnotify>
+            <command>rofi -combi-modi window,drun,run -show combi -modi combi</command>
         </action>
+    </keybind>
+    <keybind key="A-F2">
+      <action name="Execute">
+        <!-- <command>lxsession-default launcher_manager</command> -->
+        <command>krunner</command>
+      </action>
     </keybind>
     <keybind key="W-F2">
       <action name="Execute">
-          <command>rofi -combi-modi window,drun,run -show combi -modi combi</command>
+        <command>rofi -combi-modi window,drun,run -show combi -modi combi</command>
       </action>
     </keybind>
-
     <!-- Keybindings to toggle fullscreen -->
     <keybind key="W-F11">
       <action name="ToggleFullscreen"/>
@@ -455,11 +433,10 @@
     </keybind>
     <!-- Run hotshell -->
     <keybind key="W-s">
-        <action name="Execute">
-            <command>lxterm -T "hotshell" -e "bash --norc -c hs"</command>
-        </action>
+      <action name="Execute">
+        <command>lxterm -T "hotshell" -e "bash --norc -c hs"</command>
+      </action>
     </keybind>
-
     <!-- Special Keys -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
@@ -499,7 +476,6 @@
         <command>lxsession-default file_manager</command>
       </action>
     </keybind>
-
     <keybind key="Print">
       <action name="Execute">
         <command>lxsession-default screenshot</command>
@@ -507,34 +483,29 @@
     </keybind>
     <!-- screenshot: rectangle (spectacle) -->
     <keybind key="S-Print">
-        <action name="Execute">
-            <command>spectacle -r</command>
-        </action>
+      <action name="Execute">
+        <command>spectacle -r</command>
+      </action>
     </keybind>
     <!-- screenshot: current window with scrot -->
     <keybind key="A-Print">
-        <action name="Execute">
-            <command>lxsession-default screenshot window</command>
-        </action>
+      <action name="Execute">
+        <command>lxsession-default screenshot window</command>
+      </action>
     </keybind>
-
     <!-- Launch logout when push on the shutdown button -->
     <keybind key="XF86PowerOff">
       <action name="Execute">
         <command>lxsession-default quit</command>
       </action>
     </keybind>
-
   </keyboard>
-
   <!-- ********* -->
   <!-- *       * -->
   <!-- * MOUSE * -->
   <!-- *       * -->
   <!-- ********* -->
-
   <mouse>
-
     <dragThreshold>8</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
     <doubleClickTime>200</doubleClickTime>
@@ -863,16 +834,12 @@
       </mousebind>
     </context>
   </mouse>
-
-
   <!-- ******** -->
   <!-- *      * -->
   <!-- * MENU * -->
   <!-- *      * -->
   <!-- ******** -->
-
   <menu>
-
     <!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
@@ -900,9 +867,7 @@
     <showIcons>yes</showIcons>
     <!-- show icons on the menu -->
   </menu>
-
   <applications>
-
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
@@ -990,7 +955,5 @@
       <maximized>true</maximized>
     </application>
     -->
-
   </applications>
-
 </openbox_config>
