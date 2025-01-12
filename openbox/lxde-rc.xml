@@ -457,6 +457,11 @@
         <command>lxsession-default calculator</command>
       </action>
     </keybind>
+    <keybind key="S-XF86Calculator">
+        <action name="Execute">
+            <command>qalculate-gtk</command>
+        </action>
+    </keybind>
     <!-- Keybinding for computer button-->
     <keybind key="XF86MyComputer">
       <action name="Execute">

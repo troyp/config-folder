@@ -466,8 +466,13 @@
     </keybind>
     <!-- Keybinding for calculator button-->
     <keybind key="XF86Calculator">
+        <action name="Execute">
+            <command>lxsession-default calculator</command>
+        </action>
+    </keybind>
+    <keybind key="S-XF86Calculator">
       <action name="Execute">
-        <command>lxsession-default calculator</command>
+        <command>qalculate-gtk</command>
       </action>
     </keybind>
     <!-- Keybinding for computer button-->
